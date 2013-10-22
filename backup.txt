@@ -1,0 +1,92 @@
+#require 'spec_helper'
+require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+
+require '/lib/game/die'
+require '/lib/game/face'
+require '/lib/game/game'
+require '/lib/game/player'
+require '/lib/game/turn'
+
+require '/lib/monopoly/monopoly'
+require '/lib/monopoly/traditionaldie'
+
+describe "Phase 1: Board and move" do
+  
+  it "Are the players names correctly filled in?"  
+    player = Player.new
+    player.should.be_nil  
+  end
+  
+  # create game with 1 player
+  before do
+    player1 = Player.new(1, "player1")
+    players << player1            
+    monopoly = Monopoly.new
+    monopoly.players = players
+  end 
+
+  it "Can add players to the game" do
+    monopoly.players.count.should eq(1)
+  end
+  
+  it "There are at least 2 players in the game?" do
+    expect { monopoly.start }.to raise_error("play with at least 2 players")
+  end
+  
+  # add player 2
+  before do
+    player2 = Player.new(2, "player2")
+    players << player2
+    monopoly.players = players
+  end
+
+  it "Fewer than eight players given?" do
+    expect { monopoly.start }.to raise_error("Play with up to 8 players")
+  end
+  
+  it "The boardgame will be played with two dices?" do
+    monopoly.dice.count.should eq(2)  
+  end
+  
+  # start game
+  before do
+    dryrun = true
+    monopoly.start(dryrun)
+  end
+    
+  it "Has player 1 begin to play?" do
+    monopoly.turn.player.should eq("player1")
+  end
+
+  # play round 1
+  before do
+    monopoly.turn.dice_throw
+  end
+  
+  it "The total value of the throw not less than 2 and not more then 12?" do
+    monopoly.turn.dice_score.should be_within(2).of(12)
+  end
+
+  it "Does the value of a dice thrown to a value between 1 t / m 6?" do 
+    monopoly.dice each do |die|
+      monopoly.turn.score_for_each_die(die).should be_within(1).of(6)
+    end
+  end
+  
+  it "Does the player have thrown again when both dice have the same value?" do
+    monopoly.round.should eq(1)
+    monopoly.turn.number_of_dice.should be_bigger_than(1)
+  end
+  
+  it "player position is correct after throwing?" do
+    monopoly.players[monopoly.turn.player].position.should eq(monopoly.turn.new_position)
+  end 
+  
+  it "Have al players played after the first round?" do
+    monopoly.round.should eq(1)
+    monopoly.players.each do |player|
+      player.played.should be_true
+    end
+  end
+  
+end

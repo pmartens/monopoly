@@ -1,0 +1,11 @@
+require 'game/die'
+require 'game/face'
+require 'game/game'
+require 'game/gameboard'
+require 'game/player'
+require 'game/space'
+require 'game/turn'
+
+require 'monopoly/monopoly'
+require 'monopoly/monopolyboard'
+require 'monopoly/traditionaldie'
