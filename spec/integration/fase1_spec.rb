@@ -11,7 +11,7 @@ describe "Phase 1: Board and move ->" do
     @dryrun = true # runs only one round
   end  
   
-  it "Are the player name correctly filled in?" do
+  it "Are the player names correctly filled in?" do
     expect { Player.new('') }.to raise_error("Player name empty!")
   end
   
@@ -34,7 +34,7 @@ describe "Phase 1: Board and move ->" do
     expect { Monopoly.new(players) }.to raise_error("play with at least 2 players")
   end
   
-  it "Fewer than eight players given?" do
+  it "Fewer than eight players gives an error message?" do
     players = []
     (1..9).each do |i|
       players << Player.new("player#{i}")
@@ -46,35 +46,33 @@ describe "Phase 1: Board and move ->" do
     monopoly = Monopoly.new(@players)
     monopoly.dice.count.should eq(2)  
   end
-
+  
   it "Has player 1 begin to play?" do
     monopoly = Monopoly.new(@players)
     monopoly.start(@dryrun)
     #First round ends with player 2
-    monopoly.turn.player.name.should eq("player2")
+    monopoly.turn_player.name.should eq("player2")
   end
   
-  it "The total value of the throw not less than 2 and not more then 12?" do
+  it "The total value of the dice throw is not less than 2 and not more then 12?" do
     monopoly = Monopoly.new(@players)
     monopoly.start(@dryrun)
-    monopoly.turn.dice_score.should be_between(2, 12)
+    monopoly.turn_dice_score.should be_between(2, 12)
   end
   
-  it "Does the value of a dice thrown to a value between 1 t / m 6?" do 
+  it "Does the value of each die throw between 1 t / m 6?" do 
     monopoly = Monopoly.new(@players)
     monopoly.start(@dryrun)
-    monopoly.turn.dice.each do |die|
-      monopoly.turn.score_for_each_die(die).should be_between(1, 6)
-    end
+    score = monopoly.turn_each_die_score
+    score.each{ |die_score| die_score.should be_between(1, 6) }
   end
   
   it "Does the player have thrown again when both dice have the same value?" do
     monopoly = Monopoly.new(@players)
-    monopoly.turn = Turn.new(monopoly.dice)
     player = monopoly.players.first
-    monopoly.turn.next(player)
+    monopoly.next_player_turn(player)
     score = []
-    monopoly.turn.dice.each{ |die| score << { die => 1 } }
+    monopoly.dice.each{ |die| score << { die => 1 } }
     s = []
     score.each{ |data| data.each{ |key, value| s.concat([value])}}
     s.uniq.count eq(1)
@@ -83,14 +81,14 @@ describe "Phase 1: Board and move ->" do
   it "player position is correct after throwing?" do
     monopoly = Monopoly.new(@players)
     monopoly.start(@dryrun)
-    previouspos = monopoly.turn.player.current_position - monopoly.turn.move_position 
-    previouspos.should eq(monopoly.turn.player.previous_position)
+    previouspos = monopoly.turn_player.current_position - monopoly.move_player_position
+    previouspos.should eq(monopoly.turn_player.previous_position)
   end 
   
   it "Have al players played after the first round?" do
     monopoly = Monopoly.new(@players)
     monopoly.start(@dryrun)
-    monopoly.round.should eq(1)
+    monopoly.round?.should eq(1)
     monopoly.players.each do |player|
       player.played.should be > 0
     end

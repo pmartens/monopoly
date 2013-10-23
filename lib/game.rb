@@ -4,7 +4,6 @@ require 'game/game'
 require 'game/gameboard'
 require 'game/player'
 require 'game/space'
-require 'game/turn'
 
 require 'monopoly/monopoly'
 require 'monopoly/monopolyboard'
