@@ -56,9 +56,14 @@ class Game
     score
   end
 
+  #def move_player_position
+  #   puts "Move to new position: #{turn_dice_score.to_i}"
+  #   turn_dice_score.to_i
+  #end
+  
   def move_player_position
-    puts "Move to new position: #{turn_dice_score.to_i}"
-    turn_dice_score.to_i
+     newpos = @player.current_position + turn_dice_score.to_i 
+     newpos > gameboard.spaces.count ? gameboard.spaces.count - newpos : newpos
   end
   
   private

@@ -81,8 +81,11 @@ describe "Phase 1: Board and move ->" do
   it "player position is correct after throwing?" do
     monopoly = Monopoly.new(@players)
     monopoly.start(@dryrun)
-    previouspos = monopoly.turn_player.current_position - monopoly.move_player_position
-    previouspos.should eq(monopoly.turn_player.previous_position)
+    if monopoly.turn_player.played > 1
+      (monopoly.turn_player.current_position - monopoly.turn_player.previous_position).should eq(monopoly.turn_dice_score)
+    else
+      monopoly.turn_player.current_position.should eq(monopoly.turn_dice_score)
+    end
   end 
   
   it "Have al players played after the first round?" do
@@ -92,6 +95,19 @@ describe "Phase 1: Board and move ->" do
     monopoly.players.each do |player|
       player.played.should be > 0
     end
+  end
+  
+  it "when a player has walked through all 40 spaces the player prositions start at 1 again." do
+    monopoly = Monopoly.new(@players)
+    player = monopoly.players.first
+    monopoly.next_player_turn(player)
+    score = 44
+    #monopoly.move_player_position
+    score = monopoly.turn_player.current_position + score
+    score = score > monopoly.gameboard.spaces.count ? (monopoly.gameboard.spaces.count - score).abs : score
+    #
+    monopoly.turn_player.new_position(score)
+    monopoly.turn_player.current_position.should eq(4)
   end
   
 end

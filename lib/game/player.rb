@@ -31,7 +31,8 @@ class Player
   
   def new_position( newpos )
     @previous_position = @current_position
-    @current_position += newpos 
+    #@current_position += newpos 
+    @current_position = newpos 
   end
   
 end
