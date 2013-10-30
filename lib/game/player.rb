@@ -4,6 +4,7 @@ class Player
   attr_accessor :played
   attr_accessor :previous_position
   attr_accessor :current_position
+  attr_accessor :money
 
   @@player_counter = 0
   
@@ -19,6 +20,7 @@ class Player
     @current_position = 0
     @previous_position = 0
     @played = 0
+    @money = 0
   end
   
   def count
@@ -33,6 +35,11 @@ class Player
     @previous_position = @current_position
     #@current_position += newpos 
     @current_position = newpos 
+  end
+    
+  def pay(amount=0)
+    puts (amount > 0 ? "Receive" : "Pay") + ": #{amount}" unless amount == 0
+    @money += amount
   end
   
 end

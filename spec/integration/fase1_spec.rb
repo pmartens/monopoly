@@ -97,7 +97,7 @@ describe "Phase 1: Board and move ->" do
     end
   end
   
-  it "when a player has walked through all 40 spaces the player prositions start at 1 again." do
+  it "when a player has walked through all 40 spaces the player position start at 1 again." do
     monopoly = Monopoly.new(@players)
     player = monopoly.players.first
     monopoly.next_player_turn(player)

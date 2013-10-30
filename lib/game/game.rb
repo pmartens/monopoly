@@ -5,12 +5,16 @@ class Game
   attr_accessor :dice
   attr_accessor :min_players
   attr_accessor :max_players
+  
+  attr_accessor :score
+  attr_accessor :round
     
   def initialize(players)
     @players = players
     @players.sort! { |a,b| a.id <=> b.id }
     raise "play with at least #{min_players.to_s} players" unless players.count >= min_players 
     raise "Play with up to #{max_players.to_s} players" unless players.count <= max_players 
+    reset
   end
     
   def round?
@@ -23,6 +27,7 @@ class Game
   
   def start( dryrun = false)
     reset
+    title
   end  
       
   def next_player_turn(player)
@@ -47,7 +52,7 @@ class Game
   def turn_dice_score
     score = 0
     @score.each{ |data| data.each{ |key, value| score += value}}
-    score
+    score.to_i
   end
 
   def turn_each_die_score
@@ -56,14 +61,14 @@ class Game
     score
   end
 
-  #def move_player_position
-  #   puts "Move to new position: #{turn_dice_score.to_i}"
-  #   turn_dice_score.to_i
-  #end
-  
   def move_player_position
-     newpos = @player.current_position + turn_dice_score.to_i 
-     newpos > gameboard.spaces.count ? gameboard.spaces.count - newpos : newpos
+    newpos = @player.current_position + turn_dice_score
+    newpos = newpos > gameboard.spaces.count ? ((gameboard.spaces.count - newpos).abs - 1) : newpos
+    if newpos == gameboard.spaces.count
+      newpos = 0
+    end
+    
+    @player.new_position(newpos)
   end
   
   private
@@ -77,7 +82,6 @@ class Game
   def reset
     @round = 0
     @winner = false
-    title
   end
   
   def next_round
