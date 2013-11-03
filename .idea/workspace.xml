@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7ec5ff5-6058-4ea4-82bf-0d07dd9a2d2b" name="Default" comment="" />
+    <list default="true" id="c7ec5ff5-6058-4ea4-82bf-0d07dd9a2d2b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/game/game.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/Startspace.rb" afterPath="$PROJECT_DIR$/lib/monopoly/Startspace.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/die.rb" afterPath="$PROJECT_DIR$/lib/game/die.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/face.rb" afterPath="$PROJECT_DIR$/lib/game/face.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/integration/fase2_spec.rb" afterPath="$PROJECT_DIR$/spec/integration/fase2_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/freeparkingspace.rb" afterPath="$PROJECT_DIR$/lib/monopoly/freeparkingspace.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game.rb" afterPath="$PROJECT_DIR$/lib/game.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/gameboard.rb" afterPath="$PROJECT_DIR$/lib/game/gameboard.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/incometaxspace.rb" afterPath="$PROJECT_DIR$/lib/monopoly/incometaxspace.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/luxurytaxspace.rb" afterPath="$PROJECT_DIR$/lib/monopoly/luxurytaxspace.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/monopoly.rb" afterPath="$PROJECT_DIR$/lib/monopoly/monopoly.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/monopolyboard.rb" afterPath="$PROJECT_DIR$/lib/monopoly/monopolyboard.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/monopolyspace.rb" afterPath="$PROJECT_DIR$/lib/monopoly/monopolyspace.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/player.rb" afterPath="$PROJECT_DIR$/lib/game/player.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/pot.rb" afterPath="$PROJECT_DIR$/lib/monopoly/pot.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/space.rb" afterPath="$PROJECT_DIR$/lib/game/space.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/traditionaldie.rb" afterPath="$PROJECT_DIR$/lib/monopoly/traditionaldie.rb" />
+    </list>
     <ignored path="monopoly.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c7ec5ff5-6058-4ea4-82bf-0d07dd9a2d2b" time="1382101502795" ignored="false" />
+    <file path="/Dummy.txt" changelist="c7ec5ff5-6058-4ea4-82bf-0d07dd9a2d2b" time="1383250421610" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +50,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1174" />
+    <option name="width" value="1680" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -89,8 +107,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -105,14 +123,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1174" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32964602" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25773746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2613219" sideWeight="0.670354" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />

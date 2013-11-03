@@ -1,9 +1,11 @@
 require 'game/die'
 require 'game/face'
-require 'game/game'
+require 'game/dice'
+require 'game/boardgame'
 require 'game/gameboard'
 require 'game/player'
 require 'game/space'
+require 'game/settings'
 
 require 'monopoly/monopoly'
 require 'monopoly/monopolyboard'

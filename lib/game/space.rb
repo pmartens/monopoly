@@ -1,18 +1,25 @@
-class Space
-  attr_accessor :id
-  attr_accessor :name
-  
-  @@space_counter = 0
-
-  def initialize(name = nil)
-    #raise "Space name empty!" unless !name.empty?
-    @@space_counter += 1
-    @id = @@space_counter
-    @name = name
+module Game
+  class Space
+    
+    attr_accessor :name
+    attr_accessor :game
+    
+    protected :name, :game
+    
+    def initialize(name, game)
+      @name = name
+      @game = game
+    end
+    
+    def pass_action
+    end
+    
+    def land_action
+    end
+    
+    def name
+      @name
+    end
+    
   end
-  
-  def count
-    @@space_counter
-  end
-  
 end

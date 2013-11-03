@@ -1,45 +1,28 @@
-class Player
-  attr_accessor :id
-  attr_accessor :name
-  attr_accessor :played
-  attr_accessor :previous_position
-  attr_accessor :current_position
-  attr_accessor :money
+module Game
+  class Player
 
-  @@player_counter = 0
-  
-  def initialize(name)
-    raise "Player name empty!" unless !name.empty?
-    @@player_counter += 1
-    @id = @@player_counter
-    @name = name
-    reset_play_settings
-  end
-  
-  def reset_play_settings
-    @current_position = 0
-    @previous_position = 0
-    @played = 0
-    @money = 0
-  end
-  
-  def count
-    @@player_counter
-  end
-  
-  def raise_played_counter
-    @played += 1
-  end
-  
-  def new_position( newpos )
-    @previous_position = @current_position
-    #@current_position += newpos 
-    @current_position = newpos 
-  end
+    attr_accessor :name
+    attr_accessor :position
+    attr_accessor :money
     
-  def pay(amount=0)
-    puts (amount > 0 ? "Receive" : "Pay") + ": #{amount}" unless amount == 0
-    @money += amount
-  end
+    protected :name, :money
   
+    def initialize(name)
+      raise "Player name empty!" unless !name.empty?
+      @name = name
+      @money = 0
+      @position = 0
+    end  
+    
+    def receive_money(money)
+      @money += money
+      money
+    end
+     
+    def pay_money(money)   
+      @money = @money - money
+      money
+    end   
+      
 end
+

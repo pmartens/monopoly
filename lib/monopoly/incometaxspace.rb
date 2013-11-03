@@ -1,24 +1,17 @@
-class IncomeTaxSpace < MonopolySpace
+module Monopoly
+  class IncomeTaxSpace < Space
 
-  def name
-    :incometax
-  end
+    def name
+      :incometax
+    end
+    
+    def land_value
+      200
+    end
   
-  def pass_value
-    0
+    def land_action(player)
+      player.money_pay(land_value)
+    end
+    
   end
-  
-  def land_value
-    -200
-  end
-  
-  def pass_action(monopoly)
-    pass_value
-  end
-
-  def land_action(monopoly)
-    monopoly.gameboard.pot.in(land_value.abs)
-    land_value
-  end
-  
 end
