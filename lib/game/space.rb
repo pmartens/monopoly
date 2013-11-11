@@ -2,19 +2,17 @@ module Game
   class Space
     
     attr_accessor :name
-    attr_accessor :game
     
-    protected :name, :game
+    protected :name
     
-    def initialize(name, game)
+    def initialize(name = nil)
       @name = name
-      @game = game
     end
     
-    def pass_action
+    def pass_action(player)
     end
     
-    def land_action
+    def land_action(player)
     end
     
     def name

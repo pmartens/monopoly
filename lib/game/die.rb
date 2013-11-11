@@ -1,13 +1,21 @@
 module Game
   class Die
   
-    attr_accessor :value
+    attr_accessor :values
   
-    protected :value
+    protected :values
   
-    def throw_dice
-      @value.sample.to_int
+    def initialize
+      @values = []
     end
     
+    def add_value(value)
+      @values << value
+    end
+    
+    def throw_die
+      @values.sample.to_int
+    end
+        
   end  
 end

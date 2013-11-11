@@ -4,13 +4,13 @@ module Monopoly
     attr_accessor :money
     
     private :money
-  
-    def money
-      @money
-    end
-  
+      
     def initialize
       @money = 0
+    end
+    
+    def money
+      @money
     end
         
     def money_out

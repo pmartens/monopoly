@@ -2,7 +2,7 @@ module Monopoly
   class StartSpace < Space
   
     def name
-      :start
+      "start"
     end
   
     def pass_value

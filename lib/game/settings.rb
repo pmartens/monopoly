@@ -1,17 +1,15 @@
 module Game
   class Settings
     attr_accessor :players
-    attr_accessor :gameboard
-    attr_accessor :dice
-    attr_accessor :min_players
-    attr_accessor :max_players
+    attr_reader :gameboard
+    attr_reader :dice
     
-    protected :players, :gameboard, :dice, :min_players, :max_players
-    
-    def initialize(players)
+    def initialize(players, gameboard = nil, dice = nil)
       @players = players
       @players.sort! { |a,b| a.name <=> b.name }
+      @gameboard = gameboard unless gameboard.nil?
+      @dice = dice unless dice.nil?
     end
-    
+
   end
 end

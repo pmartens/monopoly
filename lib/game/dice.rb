@@ -6,16 +6,24 @@ module Game
 
     protected :dice, :value
     
+    def initialize
+      @dice = []
+    end
+    
+    def add_die(die)
+      @dice << die
+    end
+    
     def throw_dice
       @value = []
       @dice.each do |die|
-        @value << die.throw_dice
+        @value << die.throw_die
       end
-      @value.sum
+      @value.inject(:+)
     end
         
     def all_die_values_the_same?
-      @value.uniq.nil?
+      @value.uniq.count == 1
     end
   end
 end

@@ -5,18 +5,20 @@ module Game
     
     protected :spaces
     
+    def initialize
+      @spaces = []
+    end
+    
     def space(id)
       @spaces[id]
     end
-      
-    protected
-    
-    def spaces
-      @spaces || @spaces = []
-    end
-    
+
     def add_space(space)
       @spaces << space
+    end
+    
+    def space_count
+      @spaces.count
     end
       
   end

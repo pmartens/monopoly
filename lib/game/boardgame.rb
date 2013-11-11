@@ -18,26 +18,22 @@ module Game
     #def winner?
     #  @player
     #end   
-  
-    def active_player
-      @active_player
-    end
-  
+    
     def throw_dice
-      player = @players[@active_player]
-      startpos = player.position
-      steps = @dice.throw_dice
-      endpos = player.position + steps
+      #binding.pry
+      startpos = active_player.position
+      steps = @settings.dice.throw_dice
+      endpos = active_player.position + steps
       
       # determine new position
-      newpos = endpos > gameboard.spaces_count ? ((gameboard.spaces_count - endpos).abs) : endpos
-      if newpos == gameboard.spaces_count
+      newpos = endpos > @settings.gameboard.space_count ? ((@settings.gameboard.space_count - endpos).abs) : endpos
+      if newpos == @settings.gameboard.space_count
         newpos = 0
       end
     
       # set maximum position of gameboard
-      if endpos > gameboard.space_count
-        topos = gameboard.space_count
+      if endpos > @settings.gameboard.space_count
+        topos = @settings.gameboard.space_count
       else
         topos = newpos
       end
@@ -46,19 +42,19 @@ module Game
       curpos = startpos + 1
       while curpos < topos do
         # execute space action
-        space_action(gameboard.space(curpos))
+        space_action(@settings.gameboard.space(curpos))
         curpos += 1
-        if curpos == gameboard.space_count && newpos < endpos
+        if curpos == @settings.gameboard.space_count && newpos < endpos
           curpos = 0
           topos = newpos
         end
       end
  
       # execute land action
-      land_action(gameboard.space(newpos))
+      land_action(@settings.gameboard.space(newpos))
 
       # set player position
-      player.position = newpos  
+      active_player.position = newpos  
       
       # to next player
       next_player
@@ -66,12 +62,16 @@ module Game
   
     protected
   
+    def active_player
+      @settings.players[@active_player]
+    end
+  
     def pass_action(space)
-      space.pass_action(@player)
+      space.pass_action(@active_player)
     end
   
     def land_action(space)
-      space.land_action(@player)
+      space.land_action(@active_player)
     end
     
     def next_player

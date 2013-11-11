@@ -3,9 +3,9 @@ module Monopoly
     
     attr_reader :pass_value
     attr_reader :land_value
-
-    protected :pass_value, :land_value
     
+    protected :pass_value, :land_value
+        
     def pass_value
       0
     end
@@ -14,11 +14,11 @@ module Monopoly
       0
     end
 
-    def pass_action(player)
+    def pass_action(player = nil, pot = nil)
       #player.pay_money(pass_value)
     end
     
-    def land_action(player)
+    def land_action(player = nil, pot = nil)
       #player.pay_money(pass_value)
     end
     

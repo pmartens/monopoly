@@ -1,5 +1,5 @@
 module Monopoly
-  class LuxuryTaxSpace < Monopoly::Space
+  class LuxuryTaxSpace < Space
   
     def name
       "luxurytax"
@@ -9,8 +9,8 @@ module Monopoly
       100
     end
     
-    def land_action(player)
-      @game.gameboard.pot.money_in(player.pay_money(land_value))
+    def land_action(player, pot)
+      pot.money_in(player.pay_money(land_value))
     end
     
   end  

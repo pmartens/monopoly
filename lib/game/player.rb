@@ -10,9 +10,21 @@ module Game
     def initialize(name)
       raise "Player name empty!" unless !name.empty?
       @name = name
-      @money = 0
-      @position = 0
+      reset
     end  
+    
+    def name
+      @name
+    end
+    
+    def money
+      @money
+    end
+    
+    def reset
+      @money = 0
+      @position = 0      
+    end
     
     def receive_money(money)
       @money += money
@@ -22,7 +34,6 @@ module Game
     def pay_money(money)   
       @money = @money - money
       money
-    end   
-      
+    end 
+  end    
 end
-

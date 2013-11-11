@@ -2,11 +2,11 @@ module Monopoly
   class FreeParkingSpace < Space
 
     def name
-      :freeparking
+      "freeparking"
     end
         
-    def land_action(player)
-      player.receive_money(@game.gameboard.pot.money_out)
+    def land_action(player, pot)
+      player.receive_money(pot.money_out)
     end
     
   end
