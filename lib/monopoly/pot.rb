@@ -1,27 +1,21 @@
 module Monopoly
   class Pot
-  
-    attr_accessor :money
-    
-    private :money
-      
+
+    attr_reader :money
+
     def initialize
       @money = 0
     end
-    
-    def money
-      @money
-    end
-        
-    def money_out
+
+    def pay_out
       m = @money
       @money = 0
       m
     end
-  
+
     def money_in(amount)
       @money += amount unless amount < 0
     end
-    
-  end   
+
+  end
 end

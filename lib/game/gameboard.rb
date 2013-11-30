@@ -1,16 +1,12 @@
 module Game
   class GameBoard
   
-    attr_accessor :spaces
-    
-    protected :spaces
-    
-    def initialize
+    def initialize(settings)
       @spaces = []
     end
     
-    def space(id)
-      @spaces[id]
+    def space(index)
+      @spaces[index]
     end
 
     def add_space(space)

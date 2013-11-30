@@ -1,19 +1,17 @@
 module Game
   class Dice
-  
-    attr_accessor :dice
-    attr_accessor :value
 
-    protected :dice, :value
-    
+    attr_reader :value
+
     def initialize
       @dice = []
+      @value = 0
     end
-    
+
     def add_die(die)
       @dice << die
     end
-    
+
     def throw_dice
       @value = []
       @dice.each do |die|
@@ -21,11 +19,9 @@ module Game
       end
       @value.inject(:+)
     end
-        
-    def all_die_values_the_same?
+
+    def all_values_equal?
       @value.uniq.count == 1
     end
   end
 end
-
-# double = true unless die.faces.sample.value.to_int == score && @dice.count == 2

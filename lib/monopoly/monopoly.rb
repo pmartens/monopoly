@@ -1,35 +1,33 @@
 module Monopoly
   class Monopoly < Game::BoardGame
 
-    attr_accessor :pot
-    
-    protected :pot
+    attr_reader :pot
 
     def initialize(settings)
+      @pot = Monopoly::Pot.new
+      super(settings)
+    end
+
+    def restart_game
       super
-      @pot = Pot.new
-      set_players_start_fund
-    end  
-  
-    protected
-      
-    def set_players_start_fund
       @settings.players.each do |player|
         player.receive_money(@settings.start_fund)
       end
     end
-  
+
+    def winner?
+      count = 0
+      @settings.players.each do |player|
+         count += 1 unless player.bankrupt?
+      end
+      count == 1
+    end
+
+    protected
+
     def next_player
       super unless @settings.dice.double?
     end
-    
-    def pass_action(space)
-      space.pass_action(@player, @pot)
-    end
-  
-    def land_action(space)
-      space.land_action(@player, @pot)
-    end
-    
-  end  
+
+  end
 end
