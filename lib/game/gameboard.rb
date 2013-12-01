@@ -1,10 +1,11 @@
 module Game
   class GameBoard
-  
-    def initialize(settings)
+
+    def initialize(boardgame)
+      @boardgame = boardgame
       @spaces = []
     end
-    
+
     def space(index)
       @spaces[index]
     end
@@ -12,10 +13,10 @@ module Game
     def add_space(space)
       @spaces << space
     end
-    
+
     def space_count
       @spaces.count
     end
-      
+
   end
 end

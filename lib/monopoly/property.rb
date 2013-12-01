@@ -3,7 +3,7 @@ module Monopoly
 
     attr_reader :owner
 
-    def initialize(monopoly, properties, name = nil, sale_price, interest)
+    def initialize(monopoly, properties, name, sale_price, interest)
       @owner = nil
       @properties = properties
       @sale_price = sale_price
@@ -12,19 +12,19 @@ module Monopoly
     end
 
     def land_action(player)
-      return unless !player == @owner
+      return if player == @owner
       if @owner.nil?
         player.pay_money(@sale_price)
-        @owner = player unless !player.bankrupt?
+        @owner = player unless player.bankrupt?
       else
-        @owner.receive_money(player.pay_money(@interest)
+        @owner.receive_money(player.pay_money(interest))
       end
     end
 
-    private:
+    :protected
 
     def interest
-      @interest
+      @properties.owns_all(@owner) ? @interest * 2 : @interest
     end
 
   end

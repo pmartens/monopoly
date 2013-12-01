@@ -1,10 +1,9 @@
 module Monopoly
   module Space
-    class FreeParkingSpace < Game::Space
+    class FreeParking < Game::Space
 
       def initialize(monopoly)
-        @name = "freeparking"
-        super( monopoly, name)
+        super( monopoly, "freeparking")
       end
 
       def land_action(player)

@@ -1,6 +1,6 @@
 module Monopoly
   module Space
-    class TaxSpace < Space
+    class Tax < Game::Space
 
       def initialize(monopoly, name, land_value)
         @name = "start"

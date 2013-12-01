@@ -4,8 +4,8 @@ module Monopoly
     attr_reader :pot
 
     def initialize(settings)
-      @pot = Monopoly::Pot.new
-      super(settings)
+      @pot = Pot.new
+      super(settings, MonopolyBoard.new(self))
     end
 
     def restart_game

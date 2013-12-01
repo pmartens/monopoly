@@ -1,6 +1,6 @@
 module Monopoly
   module Space
-    class Start < Space
+    class Start < Game::Space
 
       def initialize(monopoly)
         @name = "start"
@@ -15,7 +15,7 @@ module Monopoly
         player.receive_money(land_value)
       end
 
-      private:
+      :private
 
       def pass_value
         100

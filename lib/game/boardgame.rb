@@ -2,9 +2,11 @@ module Game
   class BoardGame
 
     attr_reader :settings
+    attr_reader :gameboard
 
-    def initialize(settings)
+    def initialize(settings, gameboard = nil)
       @settings = settings
+      @gameboard = GameBoard.new(self) unless !gameboard.nil?
       restart_game
     end
 
