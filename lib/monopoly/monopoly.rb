@@ -11,7 +11,7 @@ module Monopoly
     def restart_game
       super
       @settings.players.each do |player|
-        player.receive_money(@settings.start_fund)
+        player.receive_money(1500)
       end
     end
 

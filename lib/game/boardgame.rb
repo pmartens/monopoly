@@ -61,7 +61,7 @@ module Game
       next_player
     end
 
-    protected
+    :protected
 
     def active_player
       @settings.players[@active_player]

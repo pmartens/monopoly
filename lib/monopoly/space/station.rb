@@ -6,7 +6,7 @@ module Monopoly
         super(monopoly, properties, name, 10, 2)
       end
 
-      :private
+      :protected
 
       def interest
         @properties.owns_count(@owner) * @interest

@@ -2,6 +2,7 @@ module Monopoly
   class Property < Game::Space
 
     attr_reader :owner
+    attr_reader :sale_price
 
     def initialize(monopoly, properties, name, sale_price, interest)
       @owner = nil
@@ -24,7 +25,7 @@ module Monopoly
     :protected
 
     def interest
-      @properties.owns_all(@owner) ? @interest * 2 : @interest
+      @interest
     end
 
   end
