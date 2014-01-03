@@ -6,22 +6,26 @@ module Game
 
     def initialize(settings, gameboard = nil)
       @settings = settings
-      @gameboard = GameBoard.new(self) unless !gameboard.nil?
+      @gameboard = gameboard.nil? ? GameBoard.new(self) : gameboard
       restart_game
     end
 
     def restart_game
+      @throw_indentifier = 0
       @active_player = 0
     end
 
-    def winner?
+    def winner
+      nil
+    end
 
+    def active_player
+      @settings.players[@active_player]
     end
 
     def throw_dice
-      raise "game played" unless !winner?
+      raise "game played" if winner.present?
 
-      #binding.pry
       startpos = active_player.position
       steps = @settings.dice.throw_dice
       endpos = active_player.position + steps
@@ -39,33 +43,40 @@ module Game
         topos = newpos
       end
 
-      # execute pass actions
-      curpos = startpos + 1
-      while curpos < topos do
-        # execute space action
-        @settings.gameboard.space(curpos).pass_action(@active_player)
-        curpos += 1
-        if curpos == @settings.gameboard.space_count && newpos < endpos
-          curpos = 0
-          topos = newpos
-        end
+      # execute before actions
+      curpos = 0
+      while curpos <= @settings.gameboard.space_count do
+        @settings.gameboard.space(curpos).before_action
       end
 
-      # execute land action
-      @settings.gameboard.space(newpos).land_action(@active_player)
+      # check if player can move position
+      can_move = true
+      curpos = 0
+      while curpos <= @settings.gameboard.space_count and can_move do
+        can_move = @settings.gameboard.space(curpos).player_can_move
+      end
 
-      # set player position
-      active_player.position = newpos
+      # execute pass actions
+      if can_move
+        curpos = startpos + 1
+        while curpos < topos do
+          # execute space action
+          @settings.gameboard.space(curpos).pass_action
+          curpos += 1
+          if curpos == @settings.gameboard.space_count && newpos < endpos
+            curpos = 0
+            topos = newpos
+          end
+        end
+        # execute land action
+        @settings.gameboard.space(newpos).land_action
+      end
 
       # to next player
       next_player
     end
 
     :protected
-
-    def active_player
-      @settings.players[@active_player]
-    end
 
     def next_player
       @active_player += 1

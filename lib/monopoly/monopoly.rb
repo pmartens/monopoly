@@ -5,6 +5,7 @@ module Monopoly
 
     def initialize(settings)
       @pot = Pot.new
+      @settings = settings
       super(settings, MonopolyBoard.new(self))
     end
 
@@ -15,12 +16,16 @@ module Monopoly
       end
     end
 
-    def winner?
+    def winner
       count = 0
+      winner = nil
       @settings.players.each do |player|
-         count += 1 unless player.bankrupt?
+        if !player.bankrupt?
+          count += 1
+          winner = player
+        end
       end
-      count == 1
+      count == 1 ? winner : nil
     end
 
     protected

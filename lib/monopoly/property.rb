@@ -1,8 +1,7 @@
 module Monopoly
-  class Property < Game::Space
+  class Property < GameSpace
 
     attr_reader :owner
-    attr_reader :sale_price
 
     def initialize(monopoly, properties, name, sale_price, interest)
       @owner = nil
@@ -12,17 +11,19 @@ module Monopoly
       super(monopoly, name)
     end
 
-    def land_action(player)
-      return if player == @owner
+    def land_action
+      return if @boardgame.active_player == @owner
       if @owner.nil?
-        player.pay_money(@sale_price)
-        @owner = player unless player.bankrupt?
+        @boardgame.active_player.pay_money(@sale_price)
+        @owner = @boardgame.active_player unless @boardgame.active_player.bankrupt?
       else
-        @owner.receive_money(player.pay_money(interest))
+        @owner.receive_money(@boardgame.active_player.pay_money(interest))
       end
     end
 
     :protected
+
+    attr_reader :sale_price
 
     def interest
       @interest

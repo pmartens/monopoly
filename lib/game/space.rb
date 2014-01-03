@@ -8,10 +8,18 @@ module Game
       @boardgame = boardgame
     end
 
-    def pass_action(player)
+    def player_can_move
+      true
     end
 
-    def land_action(player)
+    def before_action
+    end
+
+    def pass_action
+    end
+
+    def land_action
+      player.position = @boardgame.gameboard.space_index(self)
     end
 
   end

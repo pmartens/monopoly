@@ -1,6 +1,6 @@
 module Monopoly
   module Space
-    class Tax < Game::Space
+    class Tax < GameSpace
 
       def initialize(monopoly, name, land_value)
         @name = "start"
@@ -8,8 +8,8 @@ module Monopoly
         super( monopoly, name)
       end
 
-      def land_action(player)
-        @boardgame.pot.money_in(@boardgame.settings.player.pay_money(@land_value))
+      def land_action
+        @boardgame.pot.money_in(@boardgame.active_player.pay_money(@land_value))
       end
 
     end

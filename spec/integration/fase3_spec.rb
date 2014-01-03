@@ -87,34 +87,7 @@ describe "Phase 3: Properties - Monopoly Property : " do
     property.land_action(@player2)
     @player1.money.should eq(1501)
   end
-  it "7: Wanneer een tweede speler op het vastgoed vakje land waarvan de eigenaar ook in het bezit is van al het ander gelijkwaardig vastgoed dan moet dubbele rente worden betaald." do
-    properties = Monopoly::PropertyGroup.new("Test")
-    @player1.reset
-    @player2.reset
-    @player2.receive_money(2)
-    property1 = Monopoly::Property.new(@monopoly, properties, "test1", 0, 1)
-    property2 = Monopoly::Property.new(@monopoly, properties, "test2", 0, 1)
-    properties.add_property(property1)
-    properties.add_property(property2)
-    property1.land_action(@player1)
-    property2.land_action(@player1)
-    property1.land_action(@player2)
-    @player2.money.should eq(0)
-  end
-  it "8: Wanneer een tweede speler op het vastgoed vakje land waarvan de eigenaar ook in het bezit is van al het ander gelijkwaardig vastgoed dan moet de eigenaar dubbele rente ontvangen." do
-    properties = Monopoly::PropertyGroup.new("Test")
-    @player1.reset
-    @player2.reset
-    @player2.receive_money(2)
-    property1 = Monopoly::Property.new(@monopoly, properties, "test1", 0, 1)
-    property2 = Monopoly::Property.new(@monopoly, properties, "test2", 0, 1)
-    properties.add_property(property1)
-    properties.add_property(property2)
-    property1.land_action(@player1)
-    property2.land_action(@player1)
-    property1.land_action(@player2)
-    @player1.money.should eq(2)
-  end
+
 end
 
 describe "Phase 3: Properties - Monopoly PropertyGroup" do
@@ -177,11 +150,41 @@ describe "Phase 3: Properties - Monopoly Street" do
     @monopoly = Monopoly::Monopoly.new(settings)
   end
 
-  it "Er kan een vastgoed vakje straat worden aangemaakt." do
+  it "1: Er kan een vastgoed vakje straat worden aangemaakt." do
     properties = double("properties")
     street = Monopoly::Space::Street.new(@monopoly, properties, "street1", 0, 0)
     street.should_not be_nil
   end
+
+  it "2: Wanneer een tweede speler op de straat land waarvan de eigenaar ook in het bezit is van alle andere straten dan moet dubbele rente worden betaald." do
+    properties = Monopoly::PropertyGroup.new("Test")
+    @player1.reset
+    @player2.reset
+    @player2.receive_money(2)
+    property1 = Monopoly::Space::Street.new(@monopoly, properties, "test1", 0, 1)
+    property2 = Monopoly::Space::Street.new(@monopoly, properties, "test2", 0, 1)
+    properties.add_property(property1)
+    properties.add_property(property2)
+    property1.land_action(@player1)
+    property2.land_action(@player1)
+    property1.land_action(@player2)
+    @player2.money.should eq(0)
+  end
+  it "3: Wanneer een tweede speler op de straat land waarvan de eigenaar ook in het bezit is van alle het andere straten dan moet de eigenaar dubbele rente ontvangen." do
+    properties = Monopoly::PropertyGroup.new("Test")
+    @player1.reset
+    @player2.reset
+    @player2.receive_money(2)
+    property1 = Monopoly::Space::Street.new(@monopoly, properties, "test1", 0, 1)
+    property2 = Monopoly::Space::Street.new(@monopoly, properties, "test2", 0, 1)
+    properties.add_property(property1)
+    properties.add_property(property2)
+    property1.land_action(@player1)
+    property2.land_action(@player1)
+    property1.land_action(@player2)
+    @player1.money.should eq(2)
+  end
+
 end
 
 describe "Phase 3: Properties - Monopoly Utility" do

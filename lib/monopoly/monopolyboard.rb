@@ -74,6 +74,10 @@ module Monopoly
       electric = Space::Utility.new(@boardgame, utilities, "electric utility")
       water    = Space::Utility.new(@boardgame, utilities, "water utility")
 
+      # Create Jail spaces
+      jail = Space::Jail.new(@boardgame)
+      gotojail = Space::GoToJail.new(@boardgame, jail)
+
       # Add spaces
       add_space(Space::Start.new(@boardgame))
       add_space(dorpstraat)
@@ -85,7 +89,7 @@ module Monopoly
       add_space(Game::Space.new(@boardgame, "kans"))
       add_space(ketelstraat)
       add_space(velperplein)
-      add_space(Game::Space.new(@boardgame, "gevaningenis"))
+      add_space(gotojail)
       add_space(barteljorisstraat)
       add_space(electric)
       add_space(zijlweg)
@@ -105,7 +109,7 @@ module Monopoly
       add_space(plein)
       add_space(water)
       add_space(langepoten)
-      add_space(Game::Space.new(@boardgame, "to yail"))
+      add_space(jail)
       add_space(hofplein)
       add_space(blaak)
       add_space(Game::Space.new(@boardgame, "fonds"))

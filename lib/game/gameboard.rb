@@ -10,6 +10,14 @@ module Game
       @spaces[index]
     end
 
+    def spaces(name)
+      spaces = []
+      @spaces.each do |space|
+        spaces << space if space.name == name
+      end
+      spaces
+    end
+
     def add_space(space)
       @spaces << space
     end
@@ -18,5 +26,8 @@ module Game
       @spaces.count
     end
 
+    def space_index(space)
+      @spaces.index(space)
+    end
   end
 end
