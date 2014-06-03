@@ -1,6 +1,6 @@
 module Monopoly
   module Space
-    class GoToJail < GameSpace
+    class GoToJail < Space
 
       def initialize(monopoly, jail)
         @jail = jail

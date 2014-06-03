@@ -24,62 +24,23 @@ module Game
     end
 
     def throw_dice
-      raise "game played" if winner.present?
+      raise "game played" unless winner.nil?
+      raise "No space action executor defined" if @gameboard.space_action_executor.nil?
 
-      startpos = active_player.position
-      steps = @settings.dice.throw_dice
-      endpos = active_player.position + steps
+      @settings.dice.throw_dice
 
-      # determine new position
-      newpos = endpos > @settings.gameboard.space_count ? ((@settings.gameboard.space_count - endpos).abs) : endpos
-      if newpos == @settings.gameboard.space_count
-        newpos = 0
-      end
-
-      # set maximum position of gameboard
-      if endpos > @settings.gameboard.space_count
-        topos = @settings.gameboard.space_count
-      else
-        topos = newpos
-      end
-
-      # execute before actions
-      curpos = 0
-      while curpos <= @settings.gameboard.space_count do
-        @settings.gameboard.space(curpos).before_action
-      end
-
-      # check if player can move position
-      can_move = true
-      curpos = 0
-      while curpos <= @settings.gameboard.space_count and can_move do
-        can_move = @settings.gameboard.space(curpos).player_can_move
-      end
-
-      # execute pass actions
-      if can_move
-        curpos = startpos + 1
-        while curpos < topos do
-          # execute space action
-          @settings.gameboard.space(curpos).pass_action
-          curpos += 1
-          if curpos == @settings.gameboard.space_count && newpos < endpos
-            curpos = 0
-            topos = newpos
-          end
-        end
-        # execute land action
-        @settings.gameboard.space(newpos).land_action
-      end
+      # Execute actions on spaces
+      @gameboard.space_action_executor.execute()
 
       # to next player
-      next_player
+      next_player if @gameboard.space_action_executor.turn_finished?
+
     end
 
     :protected
 
     def next_player
-      @active_player += 1
+      @active_player = @active_player == (@settings.players.count-1) ? 0 : @active_player += 1
     end
 
   end

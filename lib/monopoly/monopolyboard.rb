@@ -4,15 +4,35 @@ module Monopoly
     def initialize(monopoly)
       super(monopoly)
 
+      always = Game::Space::SpaceAction.new("always")
+      always.add_condition(Game::Space::Action::Condition::Always.new(@boardgame))
+
+      start = Game::Space::SpaceAction.new("start.rb")
+      start.add_condition(Game::Space::Action::Condition::OnStartPosition.new(@boardgame))
+
+      pass = Game::Space::SpaceAction.new("pass")
+      pass.add_condition(Game::Space::Action::Condition::OnPassPosition.new(@boardgame))
+
+      target = Game::Space::SpaceAction.new("target")
+      target.add_condition(Game::Space::Action::Condition::OnTargetPosition.new(@boardgame))
+
+      default_actionlist = []
+      default_actionlist << always
+      default_actionlist << start
+      default_actionlist << pass
+      default_actionlist << target
+
+      set_space_action_executor(Game::Space::Action::Executor.new(@boardgame, default_actionlist))
+
       # Create Cities
-      onsdorp   = PropertyGroup.new("Ons Dorp")
-      arnhem    = PropertyGroup.new("Arnhem")
-      haarlem   = PropertyGroup.new("Haarlem")
-      utrecht   = PropertyGroup.new("Utrecht")
-      groningen = PropertyGroup.new("Groningen")
-      denhaag   = PropertyGroup.new("Den Haag")
-      rotterdam = PropertyGroup.new("Rotterdam")
-      amsterdam = PropertyGroup.new("Amsterdam")
+      onsdorp   = Space::Property::PropertyGroup.new("Ons Dorp")
+      arnhem    = Space::Property::PropertyGroup.new("Arnhem")
+      haarlem   = Space::Property::PropertyGroup.new("Haarlem")
+      utrecht   = Space::Property::PropertyGroup.new("Utrecht")
+      groningen = Space::Property::PropertyGroup.new("Groningen")
+      denhaag   = Space::Property::PropertyGroup.new("Den Haag")
+      rotterdam = Space::Property::PropertyGroup.new("Rotterdam")
+      amsterdam = Space::Property::PropertyGroup.new("Amsterdam")
 
       # Create streets
       dorpstraat        = Space::Street.new(@boardgame, onsdorp, "Dorpstraat", 10, 2)
@@ -63,14 +83,14 @@ module Monopoly
       amsterdam.add_property(kalverstraat)
 
       # Create Train Stations
-      stations = PropertyGroup.new("Stations")
+      stations = Space::Property::PropertyGroup.new("Stations")
       station_south = Space::Station.new(@boardgame, stations, "station south")
       station_west  = Space::Station.new(@boardgame, stations, "station west")
       station_north = Space::Station.new(@boardgame, stations, "station north")
       station_east  = Space::Station.new(@boardgame, stations, "station east")
 
       # Create Utilities
-      utilities = PropertyGroup.new("utilities")
+      utilities = Space::Property::PropertyGroup.new("utilities")
       electric = Space::Utility.new(@boardgame, utilities, "electric utility")
       water    = Space::Utility.new(@boardgame, utilities, "water utility")
 
@@ -81,12 +101,12 @@ module Monopoly
       # Add spaces
       add_space(Space::Start.new(@boardgame))
       add_space(dorpstraat)
-      add_space(Game::Space.new(@boardgame, "fonds"))
+      add_space(Game::Space::Space.new(@boardgame, "fonds"))
       add_space(brink)
       add_space(Space::Tax.new(@boardgame, "incometax", 200))
       add_space(station_south)
       add_space(steenstraat)
-      add_space(Game::Space.new(@boardgame, "kans"))
+      add_space(Game::Space::Space.new(@boardgame, "kans"))
       add_space(ketelstraat)
       add_space(velperplein)
       add_space(gotojail)
@@ -96,12 +116,12 @@ module Monopoly
       add_space(houtstraat)
       add_space(station_west)
       add_space(neude)
-      add_space(Game::Space.new(@boardgame, "fonds"))
+      add_space(Game::Space::Space.new(@boardgame, "fonds"))
       add_space(bilstraat)
       add_space(vreeburg)
       add_space(Space::FreeParking.new(@boardgame))
       add_space(akerkhof)
-      add_space(Game::Space.new(@boardgame, "kans"))
+      add_space(Game::Space::Space.new(@boardgame, "kans"))
       add_space(grotemarkt)
       add_space(heerestraat)
       add_space(station_north)
@@ -112,13 +132,14 @@ module Monopoly
       add_space(jail)
       add_space(hofplein)
       add_space(blaak)
-      add_space(Game::Space.new(@boardgame, "fonds"))
+      add_space(Game::Space::Space.new(@boardgame, "fonds"))
       add_space(coolsingel)
       add_space(station_east)
-      add_space(Game::Space.new(@boardgame, "kans"))
+      add_space(Game::Space::Space.new(@boardgame, "kans"))
       add_space(leidschestraat)
       add_space(Space::Tax.new(@boardgame, "luxurytax", 100))
       add_space(kalverstraat)
+
     end
   end
 end

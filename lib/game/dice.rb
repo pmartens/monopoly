@@ -1,8 +1,6 @@
 module Game
   class Dice
 
-    attr_reader :value
-
     def initialize
       @dice = []
       @value = 0
@@ -22,6 +20,11 @@ module Game
 
     def all_values_equal?
       @value.uniq.count == 1
+    end
+
+    def value
+      return 0 if @value.empty?
+      @value.inject(:+)
     end
   end
 end

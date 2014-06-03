@@ -9,12 +9,12 @@ module Monopoly
     end
     
     def receive_money(money)
-      @money += money
+      @money += money if money > 0
       money
     end
      
     def pay_money(money)   
-      @money = @money - money
+      @money = @money - money if money > 0
       money
     end 
     

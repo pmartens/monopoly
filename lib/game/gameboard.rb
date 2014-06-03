@@ -1,19 +1,25 @@
 module Game
   class GameBoard
 
+    attr_reader :space_action_executor
+
     def initialize(boardgame)
       @boardgame = boardgame
       @spaces = []
+    end
+
+    def set_space_action_executor(space_action_executor)
+      @space_action_executor = space_action_executor
     end
 
     def space(index)
       @spaces[index]
     end
 
-    def spaces(name)
+    def spaces(classname)
       spaces = []
       @spaces.each do |space|
-        spaces << space if space.name == name
+        spaces << space if space.class == classname
       end
       spaces
     end
@@ -29,5 +35,6 @@ module Game
     def space_index(space)
       @spaces.index(space)
     end
+
   end
 end

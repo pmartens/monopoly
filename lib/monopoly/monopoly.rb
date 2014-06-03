@@ -1,3 +1,4 @@
+
 module Monopoly
   class Monopoly < Game::BoardGame
 
@@ -11,21 +12,18 @@ module Monopoly
 
     def restart_game
       super
+      # After restart game each player has $1500
       @settings.players.each do |player|
         player.receive_money(1500)
       end
     end
 
     def winner
-      count = 0
-      winner = nil
+      winner = []
       @settings.players.each do |player|
-        if !player.bankrupt?
-          count += 1
-          winner = player
-        end
+        winner << player if !player.bankrupt?
       end
-      count == 1 ? winner : nil
+      return winner.first if winner.count == 1
     end
 
     protected

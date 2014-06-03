@@ -1,6 +1,6 @@
 module Monopoly
   module Space
-    class Start < GameSpace
+    class Start < Space
 
       def initialize(monopoly)
         @name = "start"
@@ -11,8 +11,9 @@ module Monopoly
         @boardgame.active_player.receive_money(100)
       end
 
-      def land_action(player)
+      def land_action
         @boardgame.active_player.receive_money(200)
+        super
       end
 
     end

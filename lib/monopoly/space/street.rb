@@ -1,11 +1,11 @@
 module Monopoly
   module Space
-    class Street < Property
+    class Street < Property::Property
 
       :protected
 
       def interest
-        @properties.owns_all(@owner) ? @interest * 2 : @interest
+        @propertygroup.owns_all(@owner) ? @interest * 2 : @interest
       end
 
     end

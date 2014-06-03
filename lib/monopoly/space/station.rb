@@ -1,15 +1,15 @@
 module Monopoly
   module Space
-    class Station < Property
+    class Station < Property::Property
 
-      def initialize(monopoly, properties, name )
-        super(monopoly, properties, name, 10, 2)
+      def initialize(monopoly, propertygroup, name )
+        super(monopoly, propertygroup, name, 10, 2)
       end
 
       :protected
 
       def interest
-        @properties.owns_count(@owner) * @interest
+        @propertygroup.owns_count(@owner) * @interest
       end
 
     end

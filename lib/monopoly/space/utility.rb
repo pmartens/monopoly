@@ -1,15 +1,15 @@
 module Monopoly
   module Space
-    class Utility < Property
+    class Utility < Property::Property
 
-      def initialize(monopoly, properties, name)
-        super(monopoly, properties, name, 10, 0)
+      def initialize(monopoly, propertygroup, name)
+        super(monopoly, propertygroup, name, 10, 0)
       end
 
       :protected
 
       def interest
-        (@properties.owns_all(@owner) ? 10 : 4) * @boardgame.settings.dice.value
+        (@propertygroup.owns_all(@owner) ? 10 : 4) * @boardgame.settings.dice.value
       end
 
     end
