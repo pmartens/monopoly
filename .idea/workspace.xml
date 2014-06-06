@@ -2,53 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ec5ff5-6058-4ea4-82bf-0d07dd9a2d2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/additionalrent.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/game/boardgame.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/freeparking.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/gotojail.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/jail.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monopoly.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/monopoly.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/game/player.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/player.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/pot.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/property/property.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/property/propertygroup.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/settings.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/start.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/station.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/street.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/tax.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/game/traditionaldie.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/utility.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/game/space.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/monopoly/property.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/monopoly/space.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/integration/fase1_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/integration/fase2_2_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/integration/fase2_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/integration/fase3_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/integration/fase4_spec.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/monopoly/prisonerproperty.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/property/prisonerproperty.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/monopoly/propertygroup.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/property/propertygroup.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/boardgame.rb" afterPath="$PROJECT_DIR$/lib/game/boardgame.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/boardgame.rb" afterPath="$PROJECT_DIR$/spec/integration/game/boardgame_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/player.rb" afterPath="$PROJECT_DIR$/spec/integration/game/player_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/space/action/condition/chain.rb" afterPath="$PROJECT_DIR$/spec/integration/game/space/action/condition/chain_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/space/action/condition/onpassposition.rb" afterPath="$PROJECT_DIR$/spec/integration/game/space/action/condition/onpassposition_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/space/action/condition/ontargetposition.rb" afterPath="$PROJECT_DIR$/spec/integration/game/space/action/condition/ontargetposition_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/space/action/condition/satifiable.rb" afterPath="$PROJECT_DIR$/spec/integration/game/space/action/condition/satifiable_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/space/action/executor.rb" afterPath="$PROJECT_DIR$/spec/integration/game/space/action/executor_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/game/traditionaldie.rb" afterPath="$PROJECT_DIR$/spec/integration/game/traditionaldie_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/monopoly.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/monopoly_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/player.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/player_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/pot.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/pot_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/settings.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/settings_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/additionalrent.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/additionalrent_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/freeparking.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/freeparking_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/gotojail.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/gotojail_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/jail.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/jail_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/property/property.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/property/property_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/property/propertygroup.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/property/propertygroup_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/start.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/start_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/station.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/station_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/street.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/street_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/tax.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/tax_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/integration/monopoly/space/utility.rb" afterPath="$PROJECT_DIR$/spec/integration/monopoly/space/utility_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/dice.rb" afterPath="$PROJECT_DIR$/lib/game/dice.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/freeparking.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/freeparking.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game.rb" afterPath="$PROJECT_DIR$/lib/game.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/gameboard.rb" afterPath="$PROJECT_DIR$/lib/game/gameboard.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/gotojail.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/gotojail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/jail.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/jail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/monopoly.iml" afterPath="$PROJECT_DIR$/.idea/monopoly.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/monopoly.rb" afterPath="$PROJECT_DIR$/lib/monopoly/monopoly.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/monopolyboard.rb" afterPath="$PROJECT_DIR$/lib/monopoly/monopolyboard.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/player.rb" afterPath="$PROJECT_DIR$/lib/monopoly/player.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/start.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/start.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/station.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/station.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/street.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/street.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/tax.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/tax.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/monopoly/space/utility.rb" afterPath="$PROJECT_DIR$/lib/monopoly/space/utility.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/space/action/condition/ontargetposition.rb" afterPath="$PROJECT_DIR$/lib/game/space/action/condition/ontargetposition.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/space/space.rb" afterPath="$PROJECT_DIR$/lib/game/space/space.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="monopoly.iws" />
@@ -174,6 +154,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Tests" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -224,182 +207,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="integration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="space" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="space" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="space" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monopoly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="space" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="condition" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Tests" />
       </pane>
     </panes>
   </component>
@@ -410,6 +218,7 @@
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../monopolyweb" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -516,6 +325,15 @@
       <created>1382101163336</created>
       <updated>1382101163336</updated>
     </task>
+    <task id="LOCAL-00001" summary="write unittests">
+      <created>1401826678005</created>
+      <updated>1401826678005</updated>
+    </task>
+    <task id="LOCAL-00002" summary="make changes to game framework for better use to other games">
+      <created>1401826737613</created>
+      <updated>1401826737613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -528,7 +346,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32797733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15814696" sideWeight="0.670354" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15974441" sideWeight="0.670354" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -537,10 +355,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32964602" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -558,19 +376,22 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="write unittests" />
+    <MESSAGE value="make changes to game framework for better use to other games" />
+    <option name="LAST_COMMIT_MESSAGE" value="make changes to game framework for better use to other games" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/integration/game/space/action/condition/chain.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/game/space/action/condition/chain_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030">
           <caret line="0" column="55" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/settings.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/settings_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2038835" vertical-offset="0" max-vertical-offset="1030">
           <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
@@ -605,7 +426,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/game/traditionaldie.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/game/traditionaldie_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14563107" vertical-offset="0" max-vertical-offset="1030">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -665,24 +486,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/monopoly.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/monopoly_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6553398" vertical-offset="0" max-vertical-offset="1035">
           <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/game/player.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/game/player_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24757281" vertical-offset="0" max-vertical-offset="1030">
           <caret line="17" column="80" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/game/space/action/executor.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/game/space/action/executor_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4368932" vertical-offset="0" max-vertical-offset="1275">
           <caret line="30" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -697,17 +520,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04368932" vertical-offset="0" max-vertical-offset="1030">
           <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/property/propertygroup.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/property/propertygroup_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8106796" vertical-offset="350" max-vertical-offset="1410">
           <caret line="79" column="71" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/property/property.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/property/property_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7718447" vertical-offset="0" max-vertical-offset="1030">
           <caret line="53" column="81" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="81" />
@@ -718,6 +542,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029126214" vertical-offset="0" max-vertical-offset="1030">
           <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,6 +566,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="880">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -748,10 +574,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10227273" vertical-offset="0" max-vertical-offset="880">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/utility.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/utility_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26704547" vertical-offset="80" max-vertical-offset="1020">
           <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
@@ -770,6 +597,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
           <caret line="0" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -785,6 +613,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="880">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -795,10 +624,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/game/boardgame.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/game/boardgame_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32386363" vertical-offset="0" max-vertical-offset="880">
           <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -806,6 +636,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13636364" vertical-offset="0" max-vertical-offset="880">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -813,6 +644,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6988636" vertical-offset="0" max-vertical-offset="990">
           <caret line="41" column="84" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -824,45 +656,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/street.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/street_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="880">
           <caret line="11" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/player.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/player_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10227273" vertical-offset="15" max-vertical-offset="975">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/pot.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/pot_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57954544" vertical-offset="0" max-vertical-offset="880">
           <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/start.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/start_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23863636" vertical-offset="0" max-vertical-offset="880">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/station.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/station_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5056818" vertical-offset="140" max-vertical-offset="1050">
           <caret line="39" column="79" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/tax.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/tax_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3409091" vertical-offset="0" max-vertical-offset="880">
           <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -870,13 +708,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.051136363" vertical-offset="0" max-vertical-offset="880">
           <caret line="3" column="36" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/gotojail.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/gotojail_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="880">
           <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -896,7 +736,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/additionalrent.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/additionalrent_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030">
           <caret line="0" column="74" selection-start-line="0" selection-start-column="74" selection-end-line="0" selection-end-column="74" />
@@ -904,7 +744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/jail.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/jail_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.83980584" vertical-offset="710" max-vertical-offset="1740">
           <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
@@ -912,7 +752,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/freeparking.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/monopoly/space/freeparking_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <caret line="0" column="74" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="74" />

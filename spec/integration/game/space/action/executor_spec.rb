@@ -24,7 +24,7 @@ describe "Game::Space::Action::Executor" do
   end
 
   # Test execute
-  it "1. When player throws 2 and his start.rb position is start.rb then de the new position is 2." do
+  it "1. When player throws 2 and his start_spec.rb position is start_spec.rb then de the new position is 2." do
     @players[0].position = 0
     allow(@boardgame).to receive(:active_player) {@players[0]}
     allow(@boardgame.settings.dice).to receive(:value) {2}
@@ -35,7 +35,7 @@ describe "Game::Space::Action::Executor" do
   end
 
   # Test execute
-  it "2. When player throws 2 and his start.rb position is start.rb then de the new position is 2 and turn will be finished." do
+  it "2. When player throws 2 and his start_spec.rb position is start_spec.rb then de the new position is 2 and turn will be finished." do
     @players[0].position = 0
     allow(@boardgame).to receive(:active_player) {@players[0]}
     allow(@boardgame.settings.dice).to receive(:value) {2}

@@ -13,7 +13,7 @@ module Game
         case action_name
         when "always"
           always_action
-        when "start.rb"
+        when "start_spec.rb"
           start_action
         when "pass"
           pass_action

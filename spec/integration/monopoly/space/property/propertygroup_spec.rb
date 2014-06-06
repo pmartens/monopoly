@@ -14,12 +14,12 @@ describe "Monopoly::Space::Property::PropertyGroup - " do
 
   # owns_count
 
-  it "1. When a player owns 0 properties in a propertygroup.rb the own count is 0." do
+  it "1. When a player owns 0 properties in a propertygroup_spec.rb the own count is 0." do
     propertygroup = Monopoly::Space::Property::PropertyGroup.new("test")
     propertygroup.owns_count @monopoly.settings.players[0].money.should eq(0)
   end
 
-  it "2. When a player owns 1 property in a propertygroup.rb off 1 the own count is 1." do
+  it "2. When a player owns 1 property in a propertygroup_spec.rb off 1 the own count is 1." do
     property = double("property")
     allow(property).to receive(:owner) {@monopoly.settings.players[0]}
     propertygroup = Monopoly::Space::Property::PropertyGroup.new("test")
@@ -27,7 +27,7 @@ describe "Monopoly::Space::Property::PropertyGroup - " do
     propertygroup.owns_count(@monopoly.settings.players[0]).should eq(1)
   end
 
-  it "3. When a player owns 1 property in a propertygroup.rb off 3 the own count is 1." do
+  it "3. When a player owns 1 property in a propertygroup_spec.rb off 3 the own count is 1." do
     property1 = double("property1")
     allow(property1).to receive(:owner) {@monopoly.settings.players[0]}
     property2 = double("property")
@@ -39,7 +39,7 @@ describe "Monopoly::Space::Property::PropertyGroup - " do
     propertygroup.owns_count(@monopoly.settings.players[0]).should eq(1)
   end
 
-  it "4. When a player owns 2 property in a propertygroup.rb off 3 the own count is 2." do
+  it "4. When a player owns 2 property in a propertygroup_spec.rb off 3 the own count is 2." do
     property1 = double("property1")
     allow(property1).to receive(:owner) {@monopoly.settings.players[0]}
     property2 = double("property")
@@ -51,7 +51,7 @@ describe "Monopoly::Space::Property::PropertyGroup - " do
     propertygroup.owns_count(@monopoly.settings.players[0]).should eq(2)
   end
 
-  it "5. When a player owns 3 properties in a propertygroup.rb the own count is 3." do
+  it "5. When a player owns 3 properties in a propertygroup_spec.rb the own count is 3." do
     property1 = double("property1")
     allow(property1).to receive(:owner) {@monopoly.settings.players[0]}
     propertygroup = Monopoly::Space::Property::PropertyGroup.new("test")
@@ -63,7 +63,7 @@ describe "Monopoly::Space::Property::PropertyGroup - " do
 
   # owns_all
 
-  it "6. When a player owns 1 property in a propertygroup.rb, he doesn't own all properties in de group." do
+  it "6. When a player owns 1 property in a propertygroup_spec.rb, he doesn't own all properties in de group." do
     property1 = double("property1")
     allow(property1).to receive(:owner) {@monopoly.settings.players[0]}
     property2 = double("property")
@@ -75,7 +75,7 @@ describe "Monopoly::Space::Property::PropertyGroup - " do
     propertygroup.owns_all(@monopoly.settings.players[0]).should be_false
   end
 
-  it "7. When a player owns all properties in a propertygroup.rb, he doesn't own all properties in de group." do
+  it "7. When a player owns all properties in a propertygroup_spec.rb, he doesn't own all properties in de group." do
     property1 = double("property1")
     allow(property1).to receive(:owner) {@monopoly.settings.players[0]}
     propertygroup = Monopoly::Space::Property::PropertyGroup.new("test")

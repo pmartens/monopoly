@@ -28,7 +28,7 @@ module Game
                 t = get_new_position - (@boardgame.gameboard.space_count * get_board_rounds)
               end
             end
-            # when player target position is max space postion, player start.rb at position 0
+            # when player target position is max space postion, player start_spec.rb at position 0
             t = 0 if t == @boardgame.gameboard.space_count
             t
           end

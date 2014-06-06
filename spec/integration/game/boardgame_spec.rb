@@ -11,7 +11,7 @@ describe "Game::Boardgame ->" do
     @settings = Game::Settings.new(@players, double("dice"))
   end
 
-  it "1. When start.rb a game player 1 starts the game?" do
+  it "1. When start_spec.rb a game player 1 starts the game?" do
     game = Game::BoardGame.new(@settings)
     game.active_player.should eq(@players[0])
   end

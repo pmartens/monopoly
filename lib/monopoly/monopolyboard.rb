@@ -7,7 +7,7 @@ module Monopoly
       always = Game::Space::SpaceAction.new("always")
       always.add_condition(Game::Space::Action::Condition::Always.new(@boardgame))
 
-      start = Game::Space::SpaceAction.new("start.rb")
+      start = Game::Space::SpaceAction.new("start_spec.rb")
       start.add_condition(Game::Space::Action::Condition::OnStartPosition.new(@boardgame))
 
       pass = Game::Space::SpaceAction.new("pass")
