@@ -4,20 +4,14 @@ module Monopoly
 
       def initialize(monopoly)
         @prisonerproperties = []
-        monopoly.settings.players.each do |player|
-          @prisonerproperties << Property::PrisonerProperty.new(player)
-        end
+        monopoly.settings.players.each { |player| @prisonerproperties << Property::PrisonerProperty.new(player) }
         super( monopoly, "Jail")
       end
 
       def always_action
         p = prisonerproperty
         p.double_throws = 0 if !p.double_throws == 3
-        if @boardgame.settings.dice.double?
-          p.double_throws += 1
-        else
-          p.double_throws = 0
-        end
+        p.double_throws = @boardgame.settings.dice.double? ? + 1 : 0
       end
 
       def start_action
@@ -41,13 +35,11 @@ module Monopoly
           p.double_throws = 0
           @boardgame.active_player.position = @boardgame.gameboard.space_index(self)
         end
-        return p.locked_up ? false : true
+        p.locked_up ? false : true
       end
 
       def prisonerproperty
-        @prisonerproperties.each do |p|
-          return p if p.player == @boardgame.active_player
-        end
+        @prisonerproperties.each { |p| return p if p.player == @boardgame.active_player }
       end
 
       def to_jail

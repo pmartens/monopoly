@@ -13,10 +13,8 @@ module Game
           end
 
           def satisfy(space)
-            @conditions.each do |condition|
-              return false if !condition.satisfy(space)
-              return true
-            end
+            @conditions.each { |condition| return false unless condition.satisfy(space) }
+            true
           end
 
         end

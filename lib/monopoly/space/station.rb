@@ -6,7 +6,7 @@ module Monopoly
         super(monopoly, propertygroup, name, 10, 2)
       end
 
-      :protected
+      protected
 
       def interest
         @propertygroup.owns_count(@owner) * @interest

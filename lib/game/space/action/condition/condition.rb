@@ -12,7 +12,7 @@ module Game
             return true
           end
 
-          :private
+          private
 
           def execute_space_actions?
             raise "No space action executor defined" if @boardgame.gameboard.space_action_executor.nil?

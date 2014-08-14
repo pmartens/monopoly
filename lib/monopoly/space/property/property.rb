@@ -23,7 +23,7 @@ module Monopoly
           end
         end
 
-        :protected
+        protected
 
         attr_reader :sale_price
 

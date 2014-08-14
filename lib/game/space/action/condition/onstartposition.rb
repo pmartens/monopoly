@@ -7,7 +7,7 @@ module Game
         class OnStartPosition < Condition
 
           def satisfy(space)
-            return execute_space_actions? && @boardgame.gameboard.space_index(space) == @boardgame.active_player.position
+            execute_space_actions? && @boardgame.gameboard.space_index(space) == @boardgame.active_player.position
           end
 
         end

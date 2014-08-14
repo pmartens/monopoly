@@ -20,9 +20,7 @@ module Monopoly
 
         def owns_count(owner)
           count = 0
-          @properties.each do |property|
-            count += 1 unless property.owner != owner || property.owner.nil?
-          end
+          @properties.each { |property| count += 1 unless property.owner != owner || property.owner.nil? }
           count
         end
 

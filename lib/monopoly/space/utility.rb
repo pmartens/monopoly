@@ -6,7 +6,7 @@ module Monopoly
         super(monopoly, propertygroup, name, 10, 0)
       end
 
-      :protected
+      protected
 
       def interest
         (@propertygroup.owns_all(@owner) ? 10 : 4) * @boardgame.settings.dice.value

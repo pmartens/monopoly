@@ -13,7 +13,7 @@ module Monopoly
       m
     end
 
-    def money_in(amount)
+    def money_in amount
       @money += amount unless amount < 0
     end
 

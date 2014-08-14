@@ -25,11 +25,11 @@ module Game
         end
 
         def halt?
-          return @halt
+          @halt
         end
 
         def turn_finished?
-          return true if @stack.empty?
+          true if @stack.empty?
         end
 
       end

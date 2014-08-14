@@ -8,12 +8,12 @@ module Monopoly
       @money = 0
     end
     
-    def receive_money(money)
+    def receive_money money
       @money += money if money > 0
       money
     end
      
-    def pay_money(money)   
+    def pay_money money
       @money = @money - money if money > 0
       money
     end 

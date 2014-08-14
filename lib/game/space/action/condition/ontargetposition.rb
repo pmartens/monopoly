@@ -18,7 +18,7 @@ module Game
             execute_space_actions? && @boardgame.gameboard.space_index(space) == p
           end
 
-          :private
+          private
 
           def get_target_position
             # determine new position
